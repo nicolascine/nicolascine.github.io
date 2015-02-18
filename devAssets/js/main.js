@@ -3,7 +3,7 @@ $(window).load(function() {
     
     $(".main-content").delay(600).fadeIn("slow");
     	//$("#mask").delay(1000).fadeOut("slow");
-    });
+
 
 	$('.flexslider').flexslider({
 		animation: "fade",
@@ -20,6 +20,7 @@ $(window).load(function() {
 	});
 
 });
+
 /* Mixitup Portfolio */
 /*
 jQuery(document).ready(function($) {
