@@ -1,11 +1,10 @@
 $(window).load(function() {
   "use strict";
-    	$(".main-content").delay(600).fadeIn("slow");
+    
+    $(".main-content").delay(600).fadeIn("slow");
     	//$("#mask").delay(1000).fadeOut("slow");
     });
-/* Flexslider */
-$(window).load(function() {
-  "use strict";
+
 	$('.flexslider').flexslider({
 		animation: "fade",
 		start: function(slider) {
@@ -19,6 +18,7 @@ $(window).load(function() {
 			});
 		}
 	});
+
 });
 /* Mixitup Portfolio */
 /*
@@ -30,6 +30,7 @@ jQuery(document).ready(function($) {
 	});
 });
 */
+
 /* Skills */
 jQuery(document).ready(function($) {
 	"use strict";
@@ -46,20 +47,18 @@ jQuery(document).ready(function($) {
 	    lineColor: '#00D8FF'
 	});
 
+	// get posts from my blog ~
+
 	$.getJSON( "http://neurobits.cl/api/posts/", function( data ) {
 	  var items = [];
+
 	  $.each( data, function( key, val ) {
 	    items.push( "<li id='" + key + "'>" + val + "</li>" );
 	  });
 
-	  $( "<ul/>", {
-	    "class": "listadoposts",
-	    html: items.join( "" )
-	  }).appendTo( "body" );
+	  $( "<ul/>", { "class": "posts", html: items.join( "" ) }).appendTo( "#listadoposts" );
+
 	});
-
-
-
 
 
 
