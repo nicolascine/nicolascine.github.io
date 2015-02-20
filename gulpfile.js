@@ -27,14 +27,15 @@ var LessPluginAutoPrefix = require('less-plugin-autoprefix'),
 //watch all~
 gulp.task('default', function() {
 
-  var watchJs    = ['devAssets/js/resto.js'],
+  var watchJs    = ['devAssets/js/main.js'],
       watchLess  = ['devAssets/less/**/*.less'];
 
   gulp.watch(watchJs, ['build-js']);
   gulp.watch(watchLess, ['build-less']);
 
 });
-//watch all~
+
+//watch LESS~
 gulp.task('watch-less', function() {
   var watchLess  = ['devAssets/less/**/*.less'];
   gulp.watch(watchLess, ['build-less']);
@@ -92,7 +93,7 @@ gulp.task('build-js', function () {
         d    = 'devAssets/js/vendor/jquery.easing.js',
         f    = 'devAssets/js/vendor/jquery.appear.js',
         g    = 'devAssets/js/vendor/jquery.inview.js',
-        h    = 'devAssets/js/main.js ',
+        h    = 'devAssets/js/main.js',
         i    = 'devAssets/js/vendor/animations.js',
         j    = 'devAssets/js/vendor/particle.js',
 

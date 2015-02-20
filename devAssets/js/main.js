@@ -18,15 +18,22 @@ $(window).load(function() {
 		}
 	});
 
-	// get posts from my blog ~
-	$.getJSON( "http://neurobits.cl/api/posts/", function( data ) {
+	/*
+	$.getJSON( "http://127.0.0.1:3000/api/posts", function( data ) {
 	  var items = [];
 
 	  $.each( data, function( key, val ) {
-	    items.push( "<li id='" + key + "'>" + val + "</li>" );
+
+	    
+	    items.push('<li class="blogpost"><a href="http://neurobits.cl/blog/post/'+val.slug+'">'+val.title+'</a></li>');
+	   	
+	   	return key<5;
+
 	  });
+	  
 	  $( "<ul/>", { "class": "posts", html: items.join( "" ) }).appendTo( "#listadoposts" );
-	});
+	
+	});*/
 
 
 });
